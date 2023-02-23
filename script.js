@@ -12,6 +12,7 @@ function DisplayUsername(UserName) {
 }
 
 DisplayUsername(name1);
+console.log(DisplayUsername(UserName));
 
 function StartGame() {
     let correct = 0;
@@ -27,10 +28,13 @@ function StartGame() {
             alert("You are incorrect");
             console.log("Exiting...");
         } else {
-            // handle invalid input
+            
             console.log("Invalid input, please answer yes or no.");
         }
     } CareerF(Career);
+    console.log(CareerF(Career));
+
+
     let SportsRespond = prompt("Do i prefer to play football? (yes or no)");
 
     function SportF(UserAnswer2) {
@@ -46,10 +50,13 @@ function StartGame() {
             alert("You are correct"), correct++;
             
         } else {
-            // handle invalid input
+            
             console.log("Invalid input, please answer yes or no.");
         }
     } SportF(SportsRespond);
+    console.log(SportF(SportsRespond));
+    
+
     let HobbyRespond = prompt("Is Listening to music is my Hobby ? (yes or no)");
 
     function HobbyF(UserAnswer3) {
@@ -63,10 +70,11 @@ function StartGame() {
             alert("You are incorrect");
             
         } else {
-            // handle invalid input
+            
             console.log("Invalid input, please answer yes or no.");
         }
     } HobbyF(HobbyRespond);
+    console.log(HobbyF(HobbyRespond));
 
     let FoodRespond = prompt("Is my favorite food a mango ? (yes or no)");
 
@@ -81,10 +89,12 @@ function StartGame() {
             alert("You are incorrect");
            
         } else {
-            // handle invalid input
+            
             console.log("Invalid input, please answer yes or no.");
         }
     } FoodF(FoodRespond);
+    console.log(FoodF(FoodRespond));
+
 
     const CorrectNum = 7;
     
@@ -113,7 +123,7 @@ function StartGame() {
 
     } 
     NumberF();
-    console.log()
+    console.log(NumberF())
 
 
 
@@ -144,55 +154,12 @@ function StartGame() {
         }
     } 
     favCharacters(TopCharacter);
-
-
-    // console.log(favCharacters(TopTen));
-
-
-    // const myArray = [];
-    // let input = prompt("Enter a value to add to the array, or 'done' to exit");
-
-    // while (input !== "done") {
-    //     myArray.push(input);
-    //     input = prompt("Enter another value to add to the array, or 'done' to exit");
-    // }
-
-    // console.log(myArray);
+    console.log(favCharacters(TopCharacter));
 
 
     alert("your score is " + correct + "/7")
 }
 
-
-
-//
-// else if(liveAt == "tenneesee"){
-//     alert("You got it right!!");
-//     createImages();
-//     alert("This is my house in " + live);
-//     liveResponses.innerHTML = live ;
-//  }//else if(liveAt != tennessee){
-//     alert("Wrong Answer")
-// }
-
-
-// function HousePic() {
-//     var div = document.getElementById("HouseImage");
-//     let img = document.createElement("IMG");
-//     img.width = 300;
-//     img.src = "House.jpg";
-//     img.classList.add("image");
-//     div.appendChild(img);
-// }
-
-// function CareerPic(){
-//     var div = document.getElementById("CareerPic");
-//     let img = document.createElement("IMG");
-//     img.width = 300;
-//     img.scr = "ComputerJobPic.jpg";
-//     img.classList.add("image");
-//     div.appendChild(img);
-// }
 
 // function WrongPic(){
 //     var div = document.getElementById("WrongPic");
@@ -201,18 +168,4 @@ function StartGame() {
 //     img.scr = "WrongPic.webp";
 //     img.classList.add("image");
 //     div.appendChild(img);
-// }
-
-
-
-
-
-
-
-// showAlertForLive(live)
-// function showAlert() {
-//     var image = document.getElementById("alert-image");
-//     image.style.display = "block";
-//     alert("Alert!");
-//     image.style.display = "none";
 // }
