@@ -71,6 +71,32 @@ button{
 #Welcome{
     position:fixed;
     left: 10%;
-    top:75%;
+    top:65%;
     font-size:50px;
+}
+#TopTen{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    left: 12%;
+    top:60%;
+    width:500px;
+    height:300px;
+    flex-direction: column;
+    text-align: center;
+    
+}
+h3{
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+#FirstRow{
+    display:flex;
+    justify-content: space-between;
+}
+#SecondRow{
+    display:flex; 
+    margin-top:5px;
+    justify-content:space-between;
 }
