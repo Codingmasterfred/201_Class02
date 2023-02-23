@@ -93,44 +93,30 @@ function StartGame() {
     //     }
     // } FoodF(FoodRespond);
 
-    const Top7 = ["Goku", "Naruto", "sasuke","kakashi", "vegeta", "ichigo", "Gohan",];
+    const Top7 = ["Goku", "Naruto", "sasuke","kakashi", "vegeta", "ichigo", "Gohan"];
     let TopCharacter = prompt("Name one of my favorite anime character? (look at the bottom for answer choice)")
     
     
 
     function favCharacters(FavoriteC) {
         let wrong = true;
-        for (let i = 0; i < 5 ; i++){
-            if ( Top7.includes(FavoriteC) ){
-                console.log(Top7.includes(FavoriteC));
-                alert("You are correct!!");
-                wrong = false;
-                break;
-            }else{
-                alert("Your wrong ");
-                FavoriteC = prompt("Name one of my favorite anime character? (look at the bottom for answer choice")
-
+        for (let i = 0; i < 5 ; i++) {
+            for (let j = 0; j < Top7.length; j++) {
+                if ( Top7[i] == FavoriteC ){
+                    alert("You are correct!!");
+                    wrong = false;
+                    break;
+                }
             }
-
-            // if (FavoriteC != TopTen[0]){
-            //     Top3 = prompt(" Wrong Answer ,What is my main anime character? (look at the bottom for answer choice)")
-            //     i++;
-            // }else if(i == 4 &&  FavoriteC == wrong){
-            //     alert("Out of chances");
-            // }else if(FavoriteC == TopTen[0]){
-            //     alert("You are correct!!")//correct++;
-            //    break;
-               
-            // }else{
-            //     console.log("Here");
-            // }
-
+            if (wrong) {
+                alert("Your wrong ");
+                FavoriteC = prompt("Name one of my favorite anime character? (look at the bottom for answer choice");
+            }
         }
-        if(wrong ){
+        if (wrong) {
             alert("Out of chances");
         }
     } 
-    console.log(TopTen[0])
     favCharacters(TopCharacter);
     // console.log(favCharacters(TopTen));
 
