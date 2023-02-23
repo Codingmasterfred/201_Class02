@@ -2,7 +2,7 @@
     padding:0;
     margin:0;
     box-sizing:border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     z-index:10;
     
 }
@@ -55,7 +55,8 @@ button{
     font-size:15px;
     z-index: 12;
     background-color: orangered;
-    color: white;
+    color: black;
+    font-family:'Arial Narrow Bold', sans-serif;
 
 }
 
@@ -77,6 +78,8 @@ button{
     left: 10%;
     top:65%;
     font-size:50px;
+    color:orangered;
+    background-color: black;
 }
 #TopTen{
     display:flex;
@@ -94,6 +97,7 @@ h3{
     margin-bottom: 10px;
     text-decoration: underline;
     background-color: orangered;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
 
 #FirstRow{
@@ -112,15 +116,19 @@ p {
 
 ul{
 
-    color: red;
-    background-color: white;
+    color: black;
+    background-color: orangered;
     list-style-type: none;
 }
 
 h2{
-
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: orangered;
     background-color: black;
     
 }
+li{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
 

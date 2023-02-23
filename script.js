@@ -1,6 +1,6 @@
 'use strict'
 
-let name = prompt("What is your name");
+let name1 = prompt("What is your name");
 let WelcomeStatement = document.querySelector("#Welcome");
 
 function DisplayUsername(UserName) {
@@ -11,87 +11,113 @@ function DisplayUsername(UserName) {
     }
 }
 
-DisplayUsername(name);
+DisplayUsername(name1);
 
 function StartGame() {
-    // let correct = 0;
-    // let Career = prompt("Do you think i want to be a web developer? (yes or no)");
-    // let CareerResponse = document.getElementById("Career")
-    // function CareerF(UserAnswer1) {
-    //     while (UserAnswer1 != "yes" || UserAnswer1 != "no") {
-    //         if (UserAnswer1.toLowerCase() == "yes") {
-    //             alert("You are correct"), correct++;
-    //             CareerResponse.innerHTML = UserAnswer1;
-    //             console.log(UserAnswer1);
-    //             break;
-    //         } else if (UserAnswer1.toLowerCase() == "no") {
-    //             alert("You are incorrect");
-    //             console.log("Exiting...");
-    //             break;
-    //         } else {
-    //             // handle invalid input
-    //             console.log("Invalid input, please answer yes or no.");
-    //         }
-    //     }
-    // } CareerF(Career);
-    // let SportsRespond = prompt("Do i prefer to play football? (yes or no)");
-    // let Sports = document.getElementById("Sports")
+    let correct = 0;
+    let Career = prompt("Do you think i want to be a web developer? (yes or no)");
+    function CareerF(UserAnswer1) {
+        while (UserAnswer1 != "yes" &&  UserAnswer1 != "no") {
+            UserAnswer1 = prompt("Invalid input, please answer yes or no.")
+        }
+        if (UserAnswer1.toLowerCase() == "yes") {
+            alert("You are correct"), correct++;
+            console.log(UserAnswer1);
+        } else if (UserAnswer1.toLowerCase() == "no") {
+            alert("You are incorrect");
+            console.log("Exiting...");
+        } else {
+            // handle invalid input
+            console.log("Invalid input, please answer yes or no.");
+        }
+    } CareerF(Career);
+    let SportsRespond = prompt("Do i prefer to play football? (yes or no)");
 
-    // function SportF(UserAnswer2) {
-    //     while (UserAnswer2 != "yes" || UserAnswer2 != "no") {
-    //         if (UserAnswer2.toLowerCase() == "yes") {
-    //             alert("You are incorrect");
-    //             Sports.innerHTML = UserAnswer2;
-    //             console.log(UserAnswer2);
-    //             break;
-    //         } else if (UserAnswer2.toLowerCase() == "no") {
-    //             alert("You are correct"), correct++;
-    //             break;
-    //         } else {
-    //             // handle invalid input
-    //             console.log("Invalid input, please answer yes or no.");
-    //         }
-    //     }
-    // } SportF(SportsRespond);
-    // let HobbyRespond = prompt("Is Listening to music is my Hobby ? (yes or no)");
-    // let hobby = document.getElementById("Hobbies")
+    function SportF(UserAnswer2) {
+        while (UserAnswer2 != "yes" && UserAnswer2 != "no") {
+           UserAnswer2 = prompt("Invalid input, please answer yes or no.")
 
-    // function HobbyF(UserAnswer3) {
-    //     while (UserAnswer3 != "yes" || UserAnswer3 != "no") {
-    //         if (UserAnswer3.toLowerCase() == "yes") {
-    //             alert("You are correct"), correct++;
-    //             hobby.innerHTML = UserAnswer3;
-    //             console.log(UserAnswer3);
-    //             break;
-    //         } else if (UserAnswer3.toLowerCase() == "no") {
-    //             alert("You are incorrect");
-    //             break;
-    //         } else {
-    //             // handle invalid input
-    //             console.log("Invalid input, please answer yes or no.");
-    //         }
-    //     }
-    // } HobbyF(HobbyRespond);
+        } if (UserAnswer2.toLowerCase() == "yes") {
+            alert("You are incorrect");
+            
+            console.log(UserAnswer2);
+           
+        } else if (UserAnswer2.toLowerCase() == "no") {
+            alert("You are correct"), correct++;
+            
+        } else {
+            // handle invalid input
+            console.log("Invalid input, please answer yes or no.");
+        }
+    } SportF(SportsRespond);
+    let HobbyRespond = prompt("Is Listening to music is my Hobby ? (yes or no)");
 
-    // let FoodRespond = prompt("Is my favorite food a mango ? (yes or no)");
-    // let Food = document.getElementById("Food")
+    function HobbyF(UserAnswer3) {
+        while (UserAnswer3 != "yes" && UserAnswer3 != "no") {
+           UserName3 = prompt("Try again")
+        } if (UserAnswer3.toLowerCase() == "yes") {
+            alert("You are correct"), correct++;
+            console.log(UserAnswer3);
+        
+        } else if (UserAnswer3.toLowerCase() == "no") {
+            alert("You are incorrect");
+            
+        } else {
+            // handle invalid input
+            console.log("Invalid input, please answer yes or no.");
+        }
+    } HobbyF(HobbyRespond);
 
-    // function FoodF(UserAnswer4) {
-    //     while (UserAnswer4 != "yes" || UserAnswer4 != "no") {
-    //         if (UserAnswer4.toLowerCase() == "yes") {
-    //             alert("You are correct"), correct++;
-    //             Food.innerHTML = UserAnswer4;
-    //             console.log(UserAnswer4);
-    //             break;
-    //         } else if (UserAnswer4.toLowerCase() == "no") {
-    //             alert("You are incorrect");
-    //             break;
-    //         } else {
-    //             // handle invalid input
-    //             console.log("Invalid input, please answer yes or no.");
-    //         }
-    //     }
-    // } FoodF(FoodRespond);
+    let FoodRespond = prompt("Is my favorite food a mango ? (yes or no)");
+
+    function FoodF(UserAnswer4) {
+        while (UserAnswer4 != "yes" || UserAnswer4 != "no") {
+            UserName4 = prompt("Invalid input, please answer yes or no.")
+        }if (UserAnswer4.toLowerCase() == "yes") {
+            alert("You are correct"), correct++;
+            console.log(UserAnswer4);
+            
+        } else if (UserAnswer4.toLowerCase() == "no") {
+            alert("You are incorrect");
+           
+        } else {
+            // handle invalid input
+            console.log("Invalid input, please answer yes or no.");
+        }
+    } FoodF(FoodRespond);
+
+    const CorrectNum = 7;
+    
+    
+    function NumberF() {
+        
+        let UserWasCorrect = false;
+        for(let i = 0; i < 4; i++){
+            let UserNum = prompt("What is my lucky number")  
+            if(UserNum == CorrectNum){
+                UserWasCorrect = true;
+                break;
+            }else if(UserNum < 7){ 
+                alert("Too Low");
+                
+            }else if(UserNum > 7){
+                alert("Too High")
+            }
+        }
+
+        if(UserWasCorrect == false){
+            alert("Out of chances");
+        }else{
+            alert("You are correct"),correct++;
+        }
+
+    } 
+    NumberF();
+    console.log()
+
+
+
+
 
     const Top7 = ["Goku", "Naruto", "sasuke","kakashi", "vegeta", "ichigo", "Gohan"];
     let TopCharacter = prompt("Name one of my favorite anime character? (look at the bottom for answer choice)")
@@ -102,8 +128,8 @@ function StartGame() {
         let wrong = true;
         for (let i = 0; i < 5 ; i++) {
             for (let j = 0; j < Top7.length; j++) {
-                if ( Top7[i] == FavoriteC ){
-                    alert("You are correct!!");
+                if ( Top7[i].toLowerCase == FavoriteC ){
+                    alert("You are correct!!"),correct++;
                     wrong = false;
                     break;
                 }
@@ -118,6 +144,8 @@ function StartGame() {
         }
     } 
     favCharacters(TopCharacter);
+
+
     // console.log(favCharacters(TopTen));
 
 
@@ -132,7 +160,7 @@ function StartGame() {
     // console.log(myArray);
 
 
-    // alert("your score is " + correct + "/7")
+    alert("your score is " + correct + "/7")
 }
 
 
