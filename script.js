@@ -64,7 +64,7 @@ function StartGame() {
 
     function HobbyF(UserAnswer3) {
         while (UserAnswer3 != "yes" && UserAnswer3 != "no") {
-           UserName3 = prompt("Try again")
+           UserAnswer3 = prompt("Try again")
         } if (UserAnswer3.toLowerCase() == "yes") {
             alert("You are correct"), correct++;
             console.log(UserAnswer3);
