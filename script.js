@@ -12,14 +12,15 @@ function DisplayUsername(UserName) {
 }
 
 DisplayUsername(name1);
-console.log(DisplayUsername(UserName));
+console.log(DisplayUsername(name1));
 
 function StartGame() {
     let correct = 0;
-    let Career = prompt("Do you think i want to be a web developer? (yes or no)");
-    function CareerF(UserAnswer1) {
+    // let Career = "";
+    function CareerF() {
+        let UserAnswer1 = prompt("Do you think i want to be a web developer? (yes or no)")
         while (UserAnswer1 != "yes" &&  UserAnswer1 != "no") {
-            UserAnswer1 = prompt("Invalid input, please answer yes or no.")
+            UserAnswer1 = prompt("Please choose yes or no")
         }
         if (UserAnswer1.toLowerCase() == "yes") {
             alert("You are correct"), correct++;
@@ -31,8 +32,10 @@ function StartGame() {
             
             console.log("Invalid input, please answer yes or no.");
         }
-    } CareerF(Career);
-    console.log(CareerF(Career));
+        return "This is from Careerf"
+    } 
+    console.log(CareerF());
+
 
 
     let SportsRespond = prompt("Do i prefer to play football? (yes or no)");
@@ -53,7 +56,7 @@ function StartGame() {
             
             console.log("Invalid input, please answer yes or no.");
         }
-    } SportF(SportsRespond);
+     } //SportF(SportsRespond);
     console.log(SportF(SportsRespond));
     
 
@@ -73,27 +76,28 @@ function StartGame() {
             
             console.log("Invalid input, please answer yes or no.");
         }
-    } HobbyF(HobbyRespond);
+     } //HobbyF(HobbyRespond);
     console.log(HobbyF(HobbyRespond));
 
-    let FoodRespond = prompt("Is my favorite food a mango ? (yes or no)");
+    // let FoodRespond = prompt("Is my favorite food a mango ? (yes or no)");
 
-    function FoodF(UserAnswer4) {
-        while (UserAnswer4 != "yes" || UserAnswer4 != "no") {
-            UserName4 = prompt("Invalid input, please answer yes or no.")
-        }if (UserAnswer4.toLowerCase() == "yes") {
+    function FoodF() {
+        let FoodRespond = prompt("Is my favorite food a mango ? (yes or no)");
+        while (FoodRespond != "yes" && FoodRespond!= "no") {
+            FoodRespond = prompt("Invalid input, please answer yes or no.")
+        }if (FoodRespond.toLowerCase() == "yes") {
             alert("You are correct"), correct++;
-            console.log(UserAnswer4);
+            console.log(FoodRespond);
             
-        } else if (UserAnswer4.toLowerCase() == "no") {
+        } else if (FoodRespond.toLowerCase() == "no") {
             alert("You are incorrect");
            
         } else {
             
             console.log("Invalid input, please answer yes or no.");
         }
-    } FoodF(FoodRespond);
-    console.log(FoodF(FoodRespond));
+    } //FoodF();
+    console.log(FoodF());
 
 
     const CorrectNum = 7;
@@ -122,7 +126,7 @@ function StartGame() {
         }
 
     } 
-    NumberF();
+    // NumberF();
     console.log(NumberF())
 
 
@@ -138,7 +142,7 @@ function StartGame() {
         let wrong = true;
         for (let i = 0; i < 5 ; i++) {
             for (let j = 0; j < Top7.length; j++) {
-                if ( Top7[i].toLowerCase == FavoriteC ){
+                if ( Top7[i].toLowerCase() == FavoriteC ){
                     alert("You are correct!!"),correct++;
                     wrong = false;
                     break;
@@ -153,12 +157,13 @@ function StartGame() {
             alert("Out of chances");
         }
     } 
-    favCharacters(TopCharacter);
+    // favCharacters(TopCharacter);
     console.log(favCharacters(TopCharacter));
 
 
     alert("your score is " + correct + "/7")
 }
+
 
 
 // function WrongPic(){
