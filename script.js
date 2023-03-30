@@ -109,7 +109,7 @@ function StartGame() {
         for(let i = 0; i < 4; i++){
             let UserNum = prompt("What is my lucky number")  
             if(UserNum == CorrectNum){
-                UserWasCorrect = true;
+                UserWasCorrect = true, correct++;
                 break;
             }else if(UserNum < 7){ 
                 alert("Too Low");
